@@ -11,11 +11,20 @@ namespace Tund09._10.Models
         public Guid Id { get; set; }
         public string Name { get; set; }
         public double Price { get; set; }
+
+        public virtual ShoppingCart ShoppingCart { get; set; }
+
+        public Food()
+        {
+
+        }
         public Food(string name, double price)
         {
             Id = Guid.NewGuid();
             Name = name;
             Price = price;
         }
+
+        
     }
 }

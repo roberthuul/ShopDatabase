@@ -20,7 +20,7 @@ namespace Tund09._10
             };
 
             ShoppingCart newCart = new ShoppingCart();
-
+            
             while (true)
             {
                 Console.WriteLine("Vali toit ostukorvi lisamiseks");
@@ -42,8 +42,7 @@ namespace Tund09._10
                     if (input == b)
                     {
 
-                        newCart.Sum = newCart.Sum + item.Price; 
-                        newCart.Items.Add(item);
+                        newCart.addToCart(item);
 
                     }
                     b++;
@@ -51,15 +50,40 @@ namespace Tund09._10
                 
 
             }
+
             
             
 
             using (var db = new ShopDbContext())
             {
+                
+                /*
+                var cartsWithZeroSum = db.ShoppingCarts.Where(x => x.Sum == 0);
+
+                foreach (var item in cartsWithZeroSum)
+                {
+                    db.ShoppingCarts.Remove(item);
+                }
+                db.SaveChanges();
+
                 db.ShoppingCarts.Add(newCart);
                 db.SaveChanges();
 
-                var carts = db.ShoppingCarts;
+                var carts = db.ShoppingCarts.Include("Items").OrderByDescending(x => x.DateCreated).ToList();
+                */
+                var sumFive = db.ShoppingCarts.Where(x => x.Sum > 4.5);
+                Console.WriteLine(sumFive);
+
+                foreach (var item in sumFive)
+                {
+                    foreach (var food in item.Items)
+                    {
+                        Console.WriteLine(food.Name);
+                    }
+                }
+                db.SaveChanges();
+
+                /*
                 foreach (var item in carts)
                 {
                     
@@ -69,7 +93,7 @@ namespace Tund09._10
                         Console.WriteLine($"Nimi: {food.Name} Hind: {food.Price}");
                     }
                     Console.WriteLine("Summa: " + item.Sum);
-                }
+                }*/
             }
             Console.ReadKey();
         }

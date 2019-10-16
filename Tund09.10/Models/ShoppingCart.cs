@@ -11,7 +11,7 @@ namespace Tund09._10.Models
         public Guid Id { get; set; }
         public double Sum { get; set; }
         public DateTime DateCreated { get; set; }
-        public List<Food> Items { get; set; }
+        public virtual ICollection<Food> Items { get; set; }
 
         public ShoppingCart()
         {
@@ -19,6 +19,12 @@ namespace Tund09._10.Models
             Items = new List<Food>();
             Sum = 0;
             DateCreated = DateTime.Now;
+        }
+
+        internal void addToCart(Food food)
+        {
+            Items.Add(food);
+            Sum = Sum + food.Price;
         }
     }
 }

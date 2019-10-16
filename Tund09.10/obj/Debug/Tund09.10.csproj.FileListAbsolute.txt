@@ -9,3 +9,13 @@ C:\Users\opilane\source\repos\Tund09.10\Tund09.10\obj\Debug\Tund09.10.csprojReso
 C:\Users\opilane\source\repos\Tund09.10\Tund09.10\obj\Debug\Tund09.10.csproj.CoreCompileInputs.cache
 C:\Users\opilane\source\repos\Tund09.10\Tund09.10\obj\Debug\Tund09.10.exe
 C:\Users\opilane\source\repos\Tund09.10\Tund09.10\obj\Debug\Tund09.10.pdb
+C:\Users\opilane\Desktop\ShopDatabase-master\Tund09.10\bin\Debug\Tund09.10.exe.config
+C:\Users\opilane\Desktop\ShopDatabase-master\Tund09.10\bin\Debug\Tund09.10.exe
+C:\Users\opilane\Desktop\ShopDatabase-master\Tund09.10\bin\Debug\Tund09.10.pdb
+C:\Users\opilane\Desktop\ShopDatabase-master\Tund09.10\bin\Debug\EntityFramework.dll
+C:\Users\opilane\Desktop\ShopDatabase-master\Tund09.10\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\opilane\Desktop\ShopDatabase-master\Tund09.10\bin\Debug\EntityFramework.xml
+C:\Users\opilane\Desktop\ShopDatabase-master\Tund09.10\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\opilane\Desktop\ShopDatabase-master\Tund09.10\obj\Debug\Tund09.10.csproj.CoreCompileInputs.cache
+C:\Users\opilane\Desktop\ShopDatabase-master\Tund09.10\obj\Debug\Tund09.10.exe
+C:\Users\opilane\Desktop\ShopDatabase-master\Tund09.10\obj\Debug\Tund09.10.pdb
