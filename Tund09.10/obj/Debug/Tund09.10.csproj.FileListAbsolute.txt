@@ -19,3 +19,15 @@ C:\Users\opilane\Desktop\ShopDatabase-master\Tund09.10\bin\Debug\EntityFramework
 C:\Users\opilane\Desktop\ShopDatabase-master\Tund09.10\obj\Debug\Tund09.10.csproj.CoreCompileInputs.cache
 C:\Users\opilane\Desktop\ShopDatabase-master\Tund09.10\obj\Debug\Tund09.10.exe
 C:\Users\opilane\Desktop\ShopDatabase-master\Tund09.10\obj\Debug\Tund09.10.pdb
+C:\Users\Robert\Source\Repos\ShopDatabase\Tund09.10\bin\Debug\Tund09.10.exe.config
+C:\Users\Robert\Source\Repos\ShopDatabase\Tund09.10\bin\Debug\Tund09.10.exe
+C:\Users\Robert\Source\Repos\ShopDatabase\Tund09.10\bin\Debug\Tund09.10.pdb
+C:\Users\Robert\Source\Repos\ShopDatabase\Tund09.10\bin\Debug\EntityFramework.dll
+C:\Users\Robert\Source\Repos\ShopDatabase\Tund09.10\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Robert\Source\Repos\ShopDatabase\Tund09.10\bin\Debug\EntityFramework.xml
+C:\Users\Robert\Source\Repos\ShopDatabase\Tund09.10\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Robert\Source\Repos\ShopDatabase\Tund09.10\obj\Debug\Tund09.10.csprojAssemblyReference.cache
+C:\Users\Robert\Source\Repos\ShopDatabase\Tund09.10\obj\Debug\Tund09.10.csproj.CoreCompileInputs.cache
+C:\Users\Robert\Source\Repos\ShopDatabase\Tund09.10\obj\Debug\Tund09.10.csproj.CopyComplete
+C:\Users\Robert\Source\Repos\ShopDatabase\Tund09.10\obj\Debug\Tund09.10.exe
+C:\Users\Robert\Source\Repos\ShopDatabase\Tund09.10\obj\Debug\Tund09.10.pdb

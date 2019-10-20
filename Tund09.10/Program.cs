@@ -56,8 +56,9 @@ namespace Tund09._10
 
             using (var db = new ShopDbContext())
             {
+                db.ShoppingCarts.Add(newCart);
+                db.SaveChanges();
                 
-                /*
                 var cartsWithZeroSum = db.ShoppingCarts.Where(x => x.Sum == 0);
 
                 foreach (var item in cartsWithZeroSum)
@@ -65,25 +66,57 @@ namespace Tund09._10
                     db.ShoppingCarts.Remove(item);
                 }
                 db.SaveChanges();
-
-                db.ShoppingCarts.Add(newCart);
-                db.SaveChanges();
+                
+                
 
                 var carts = db.ShoppingCarts.Include("Items").OrderByDescending(x => x.DateCreated).ToList();
-                */
-                var sumFive = db.ShoppingCarts.Where(x => x.Sum > 4.5);
-                Console.WriteLine(sumFive);
+                
+                var lastItem = db.ShoppingCarts.OrderByDescending(x => x.DateCreated).First();
+                Console.WriteLine($"Viimase ostukorvi summa: {lastItem.Sum}, loomise kuupäev: {lastItem.DateCreated}\nSisu:");
+                foreach (var item in lastItem.Items)
+                {
+                    Console.WriteLine(item.Name);
+                }
+                
+                var sumFive = db.ShoppingCarts.Where(x => x.Sum > 5);
+               
 
                 foreach (var item in sumFive)
                 {
-                    foreach (var food in item.Items)
+                    Console.WriteLine($"Kuupäev: {item.DateCreated}, summa: {item.Sum}");
+                }
+                
+
+                var moreThanOne = db.ShoppingCarts.Where(x => x.Items.Count > 1);
+
+                foreach (var item in moreThanOne)
+                {
+                    Console.WriteLine($"Ostukorv loodi: {item.DateCreated}, seal on {item.Items.Count} asja");
+                }
+                
+                var containsApples = db.ShoppingCarts.Where(x => x.Items.Any(y => y.Name == "õun"));
+
+                foreach (var item in containsApples)
+                {
+                    Console.WriteLine($"Ostukorv loodi: {item.DateCreated}, tooted:");
+                    foreach (var goods in item.Items)
                     {
-                        Console.WriteLine(food.Name);
+                        Console.WriteLine(goods.Name);
                     }
                 }
-                db.SaveChanges();
+                
 
-                /*
+                var totalNumber = db.ShoppingCarts.Count();
+                Console.WriteLine("Ostukorve kokku: " + totalNumber);
+                
+
+                var maxSum = db.ShoppingCarts.OrderByDescending(x => x.Sum).First();
+                Console.WriteLine("Suurima summaga ostukorv: " + maxSum.Sum);
+                
+
+                var cheapestFood = db.Foods.OrderByDescending(x => x.Price).ToList().Last();
+                Console.WriteLine("Kõige odavam toit on " + cheapestFood.Name);
+                
                 foreach (var item in carts)
                 {
                     
@@ -93,7 +126,7 @@ namespace Tund09._10
                         Console.WriteLine($"Nimi: {food.Name} Hind: {food.Price}");
                     }
                     Console.WriteLine("Summa: " + item.Sum);
-                }*/
+                }
             }
             Console.ReadKey();
         }
